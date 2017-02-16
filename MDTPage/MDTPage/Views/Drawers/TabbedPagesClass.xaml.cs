@@ -20,10 +20,19 @@ namespace MDTPage.Views.Drawers
             //asd.Add(new Page2());
             //asd.Add(new Page3());
             //asd.Add(new Page4());
+            
+            
 
             Children.Add(new Drawers.Page1());
             Children.Add(new Drawers.Page2());
             Children.Add(new Drawers.Page3());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
+            Children.Add(new Drawers.Page4());
             Children.Add(new Drawers.Page4());
 
             //CurrentPage = Children[1];

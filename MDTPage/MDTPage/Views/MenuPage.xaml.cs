@@ -30,10 +30,7 @@ namespace MDTPage.Views
                {
                    detailPage.CurrentPage = detailPage.Children[2];
                }
-               if (categoryPage.Title == "Page4")
-               {
-                   detailPage.CurrentPage = detailPage.Children[3];
-               }
+
                //if you want to show the whole content page after selecting page in drawer than use below commented syntax 
                //Detail.Navigation.PushAsync(categoryPage);
                IsPresented = false;
