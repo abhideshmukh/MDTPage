@@ -9,6 +9,7 @@ namespace MDTPage
 {
     public class App : Application
     {
+        public static ContentPage currentSelected;
         public App()
         {
 

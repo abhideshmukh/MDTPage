@@ -10,41 +10,36 @@ namespace MDTPage.Views
 {
     public partial class MenuPage : MasterDetailPage
     {
-       
-        
+        TabbedPage detailPage = new Drawers.TabbedPagesClass();
+
         public MenuPage()
         {
             InitializeComponent();
-            
             var menuPage = new DrawerPage();
-
             menuPage.OnMenuSelect = (categoryPage) =>
            {
-               
-               Detail.Navigation.PushAsync(categoryPage);
-               
-               
+               if(categoryPage.Title =="Home Page")
+               {
+                   detailPage.CurrentPage = detailPage.Children[0];
+               }
+               if (categoryPage.Title == "Page2")
+               {
+                   detailPage.CurrentPage = detailPage.Children[1];
+               }
+               if (categoryPage.Title == "Page3")
+               {
+                   detailPage.CurrentPage = detailPage.Children[2];
+               }
+               if (categoryPage.Title == "Page4")
+               {
+                   detailPage.CurrentPage = detailPage.Children[3];
+               }
+               //if you want to show the whole content page after selecting page in drawer than use below commented syntax 
+               //Detail.Navigation.PushAsync(categoryPage);
                IsPresented = false;
            };
-
-
             Master = menuPage;
-            //tabs.Children.Add(new Drawers.Page1());
-            //tabs.Children.Add(new Drawers.Page2());
-            //tabs.Children.Add(new Drawers.Page3());
-            //tabs.Children.Add(new Drawers.Page4());
-
-            var detailPage = new Drawers.TabbedPagesClass();
             Detail = detailPage;
-            
         }
     }
 }
-
-         
-            //Detail = new NavigationPage(new Drawers.Page1())
-            //{
-
-            //    BarBackgroundColor = Color.FromHex("#8999A6"),//your color here
-            //    BarTextColor = Color.White
-            //};

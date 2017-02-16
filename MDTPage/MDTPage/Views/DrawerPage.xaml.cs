@@ -27,6 +27,7 @@ namespace MDTPage.Views
                 new Category("Page1",  () =>new Drawers.Page1()),
                 new Category("Page2",  () =>new Drawers.Page2()),
                 new Category("Page3",  () =>new Drawers.Page3()),
+                new Category("Page4",  () =>new Drawers.Page4())
 
             };
             listed.BackgroundColor = Color.White;
